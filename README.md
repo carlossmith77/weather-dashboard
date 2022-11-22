@@ -1,1 +1,2 @@
 # weather-dashboard
+This is a weather dashboard application that is useful for telling the temperature, what it feels like, the humidity,the wind speed and the UVI. this a great webiste that has  a very practical use case, it also shows you the forecast of days in the future so u can be prepared for tommorow. some things we could add in the future are a high and low, temperature throughout the day and a more fleshed out design. 

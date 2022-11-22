@@ -42,23 +42,23 @@ function getCoords(event, buttonCity) {
                     currentDay.append(cityAndDate);
 
                     var tempEl = document.createElement('div');
-                    tempEl.innerText = data.current.temp+" °F";
+                    tempEl.innerText = data.current.temp+" °F daily temp";
                     currentDay.append(tempEl);
                     
                     var humidityEl = document.createElement('div');
-                    humidityEl.innerText = data.current.humidity+" %";
+                    humidityEl.innerText = data.current.humidity+" % humidity";
                     currentDay.append(humidityEl);
                     
                     var feels_likeEl = document.createElement('div');
-                    feels_likeEl.innerText = data.current.feels_like+" °F";
+                    feels_likeEl.innerText = data.current.feels_like+" °F feels like temp";
                     currentDay.append(feels_likeEl);
                    
                     var wind_speedEl = document.createElement('div');
-                    wind_speedEl.innerText = data.current.wind_speed+" mph";
+                    wind_speedEl.innerText = data.current.wind_speed+" mph wind speed ";
                     currentDay.append(wind_speedEl);
 
                     var uviEl = document.createElement('div');
-                    uviEl.innerText = data.current.uvi+"";
+                    uviEl.innerText = data.current.uvi+" uvi";
                     currentDay.append(uviEl);
                     
                     fiveDayForecast(data)
