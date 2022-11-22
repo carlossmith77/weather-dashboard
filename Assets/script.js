@@ -6,6 +6,9 @@ var searchForm = document.getElementById('search-form');
 var currentDay = document.getElementById('currentDay');
 var atlantaBtn = document.getElementById('atlanta-btn');
 var minneapolisbtn = document.getElementById('minneapolis-btn')
+var newyorkbtn = document.getElementById('new-york-btn')
+var losangelebtn = document.getElementById('los-angeles-btn')
+var chicagobtn = document.getElementById('chicago-btn')
 let lat;
 let lon;
 
@@ -81,30 +84,30 @@ function getCoords(event, buttonCity) {
             }
 
             var forecast = document.createElement('div');
-            forecast.classList.add('col-2');
+            forecast.classList.add('col-3');
             
             var cityAndDate = document.createElement('strong');
             cityAndDate.innerText = getDateString(day.dt * 1000);
             forecast.append(cityAndDate);
 
             var tempEl = document.createElement('div');
-            tempEl.innerText = day.temp.day +" °F";
+            tempEl.innerText = day.temp.day +" °F daily temp";
             forecast.append(tempEl);
             
             var humidityEl = document.createElement('div');
-            humidityEl.innerText = day.humidity+" %";
+            humidityEl.innerText = day.humidity+" % humidity";
             forecast.append(humidityEl);
             
             var feels_likeEl = document.createElement('div');
-            feels_likeEl.innerText = day.feels_like.day +" °F";
+            feels_likeEl.innerText = day.feels_like.day +" °F feels like temp";
             forecast.append(feels_likeEl);
            
             var wind_speedEl = document.createElement('div');
-            wind_speedEl.innerText = day.wind_speed+" mph";
+            wind_speedEl.innerText = day.wind_speed+" mph wind speed ";
             forecast.append(wind_speedEl);
 
             var uviEl = document.createElement('div');
-            uviEl.innerText = day.uvi+"";
+            uviEl.innerText = day.uvi+" uvi";
             forecast.append(uviEl);
 
             fiveDayForcecast.append(forecast);
@@ -125,9 +128,23 @@ function getCoords(event, buttonCity) {
 atlantaBtn.addEventListener('click', function(event) {
     getCoords(event, 'Atlanta');
     
-    minneapolisbtn.addEventListener('click', function(event) {
-        getCoords(event, 'minneapolis');
+
 });
+
+minneapolisbtn.addEventListener('click', function(event) {
+    getCoords(event, 'minneapolis');
+});
+
+newyorkbtn.addEventListener('click', function(event) {
+    getCoords(event, 'New-york');
+});
+
+losangelebtn.addEventListener('click', function(event) {
+    getCoords(event, 'los-angeles');
+});
+
+chicagobtn.addEventListener('click', function(event) {
+    getCoords(event, 'chicago');
 });
 
 
