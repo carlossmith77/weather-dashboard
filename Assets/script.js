@@ -20,7 +20,7 @@ function getDateString(dateTime) {
 
 function getCoords(event, buttonCity) {
     event.preventDefault();
-    var firstCall = 'http://api.openweathermap.org/geo/1.0/direct?q=' + (buttonCity || citySearch.value) + '&limit=5&appid=' + apiKey;
+    var firstCall = 'https://api.openweathermap.org/geo/1.0/direct?q=' + (buttonCity || citySearch.value) + '&limit=5&appid=' + apiKey;
     fetch(firstCall)
         .then(function (response) {
             return response.json();
@@ -30,7 +30,7 @@ function getCoords(event, buttonCity) {
             lon = data[0].lon;
         })
         .then(function () {
-            var secondcall = "http://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&units=imperial&appid=" + apiKey;
+            var secondcall = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&units=imperial&appid=" + apiKey;
             fetch(secondcall)
                 .then(function (response) {
                     return response.json();
